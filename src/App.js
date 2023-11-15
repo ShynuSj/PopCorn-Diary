@@ -308,6 +308,10 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   useEffect(() => {
     if (!title) return;
     document.title = `Movie | ${title}`;
+
+    return function () {
+      document.title = "popcornDiary";
+    };
   }, [title]);
   return (
     <div className="details">
